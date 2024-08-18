@@ -10,22 +10,9 @@ api:
     key: ${api_key}
 
 text_sensor:
-  - id: !extend wifi_info
+  - platform: wifi_info
     bssid:
       name: "Connected BSSID"    
-
-sensor:
-  - platform: wifi_signal
-    name: "${friendly_name} WiFi Signal"
-    id: wifi_signal_db
-  - platform: copy
-    source_id: wifi_signal_db
-    name: "${friendly_name} WiFi Signal Percent"
-    filters:
-      - lambda: return min(max(2 * (x + 100.0), 0.0), 100.0);
-    unit_of_measurement: "%"
-    entity_category: "diagnostic"
-    device_class: ""
 
 wifi:
   ssid: ${wifi_ssid}

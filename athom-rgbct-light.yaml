@@ -12,7 +12,10 @@ api:
 text_sensor:
   - platform: wifi_info
     bssid:
-      name: "Connected BSSID"    
+      name: "Connected BSSID"
+      
+ota:
+  - platform: http_request
 
 wifi:
   ssid: ${wifi_ssid}

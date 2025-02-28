@@ -10,7 +10,7 @@ api:
     key: ${api_key}
 
 network:
-  enable_ipv6: true
+  enable_ipv6: false
 
 wifi:
   ssid: ${wifi_ssid}

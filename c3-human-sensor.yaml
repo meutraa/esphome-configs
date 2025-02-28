@@ -24,11 +24,6 @@ wifi:
   ssid: ${wifi_ssid}
   password: ${wifi_password}
   power_save_mode: NONE
-  manual_ip:
-    static_ip: "192.168.1.${address}"
-    gateway: 192.168.1.1
-    subnet: 255.255.255.0
-  fast_connect: true
 
 uart:
   tx_pin: GPIO0
